@@ -1,0 +1,14 @@
+.page-container {
+  position: relative;
+  background-color: #111; /* visible behind main when it moves */
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 2;
+  background-color: #fffafa; /* content background */
+}
+
+.footer {
+  z-index: 1; /* behind main */
+}

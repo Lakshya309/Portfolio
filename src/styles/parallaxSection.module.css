@@ -1,0 +1,53 @@
+.parallaxSection {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 10;
+  padding: 4rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  mix-blend-mode: difference;
+  color: white;
+}
+
+.subtitle {
+  font-size: 1.8vw;
+  font-family: 'dirty';
+  font-weight: bolder;
+  text-align: right;
+  max-width: 50vw;
+  align-self: flex-end;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 5vw;
+  text-transform: uppercase;
+  font-family: 'dirty';
+  font-weight: bolder;
+}
+
+.imageWrapper {
+  position: fixed;
+  top: -10vh;
+  left: 0;
+  width: 100%;
+  height: 120vh;
+}
+
+.motionWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: cover;
+}

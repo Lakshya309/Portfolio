@@ -1,0 +1,45 @@
+.tech-stack-section {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+  padding: 5rem 2rem;
+  flex-wrap: wrap;
+  background: #fffafa; /* Pure black for strong contrast */
+  color: #191919; /* Off-white for readable text */
+}
+
+.stack-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.stack-title {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'cig', sans-serif;
+  color: #fcee09; /* Bold neon yellow for headings */
+}
+
+.stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.stack-tag {
+  background-color: #121212; /* Subtle dark background */
+  border: 1px solid #9b5de5; /* Purple neon accent */
+  color: #00f5d4; /* Minty teal text */
+  padding: 0.5rem 1rem;
+  font-size: 3rem;
+  border-radius: 999px;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.stack-tag:hover {
+  transform: scale(1.1);
+  background-color: #00f5d4; /* Invert hover */
+  color: #0c0c0c;
+  border-color: #fcee09; /* Optional: add hover border pop */
+}

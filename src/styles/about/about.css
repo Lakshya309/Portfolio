@@ -1,0 +1,192 @@
+/* --- Hero Section Styles --- */
+.hero-section {
+  position: relative; /* Crucial for stacking child elements */
+  height: 100vh;
+  width: 100%;
+  background-color: #fffafa; /* Fallback background */
+}
+
+/* This targets the container div inside LettersScrollScene */
+.hero-section > div:first-child {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: relative; /* Use relative to keep it in the layout flow */
+  z-index: 2; /* Ensures it's on top of the canvas */
+  display: flex;
+  align-items: center;
+  padding: 6rem;
+  height: 100%;
+  width: 100%;
+  pointer-events: none; /* Allows clicks to pass through to the canvas if needed */
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  gap: 4rem;
+  max-width: 80%;
+  pointer-events: all; /* Re-enable pointer events for text */
+}
+
+.hero-heading-block {
+  /* No specific styles needed here, layout is handled by children */
+}
+
+.identity-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  width: 100%;
+}
+
+.hero-subtext {
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: 'Satoshi';
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+  white-space: nowrap;
+  color: #555;
+}
+
+.hero-desc {
+  flex: 1;
+  font-size: 1.4rem;
+  font-family: 'Satoshi';
+  line-height: 1.7;
+  max-width: 500px;
+  color: #333;
+}
+
+.hero-tagline {
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em; /* Adjusted for better readability */
+  font-family: 'cig';
+  color: #191919;
+}
+
+.hero-tagline-secondary {
+  font-family: 'Satoshi', sans-serif;
+}
+
+.chunky {
+  font-family: "dirty", monospace;
+  font-size: clamp(5rem, 10vw, 8rem);
+  color: #222;
+  font-weight: bolder;
+  letter-spacing: 2rem;
+}
+
+/* ----- timeline ----- */
+
+/* .timeline{
+  z-index: 5;
+} */
+
+/* --- Redesigned About Section --- */
+.about-section {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  gap: 2rem;
+  min-height: 100vh;
+  padding: 8rem 6rem;
+  background-color: #191919;
+  color: #fffafa;
+}
+
+.about-text-content {
+  grid-column: 2 / span 5;
+  position: relative;
+  z-index: 2;
+}
+
+.about-heading {
+  font-family: "cig", serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.about-story-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 500px;
+  color: #ccc;
+}
+
+.about-highlight {
+  font-family: "dirty", cursive;
+  color: #f8d34f;
+}
+
+.about-photo-wrapper {
+  grid-column: 7 / span 5;
+  position: relative;
+  height: 80vh;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.about-profile-pic {
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  position: absolute;
+  top: -10%;
+}
+
+/* --- Contact Section Styles --- */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 80vh;
+  padding: 6rem;
+  background-color: #fffafa;
+  color: #191919;
+  position: relative;
+  z-index: 5;
+}
+.contact-heading {
+  font-family: "cig", serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  margin-bottom: 1.5rem;
+}
+.contact-subheading {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 600px;
+  color: #555;
+  margin-bottom: 3rem;
+}
+.contact-button {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fffafa;
+  background-color: #191919;
+  padding: 1.25rem 3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.contact-button:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}

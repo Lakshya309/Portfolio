@@ -1,0 +1,61 @@
+/* === Global Section Styling === */
+.split-section {
+  display: flex;
+  height: 40vh;                  /* Each section fills viewport height */
+  align-items: center;            /* Vertically center content */
+  justify-content: space-between;
+  padding: 0 4rem;
+  box-sizing: border-box;
+  gap: 3rem;
+  position: relative;
+  scroll-snap-align: start;
+  overflow: hidden;
+
+}
+
+/* === Left (Sticky Heading) === */
+.split-left {
+  flex: 1;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.split-left h2 {
+  font-family: 'cig', sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 0, 0);
+}
+
+/* === Right (Animated Content) === */
+.split-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Satoshi', sans-serif;
+  text-align: justify;
+  font-size: 3rem;
+  color: #191919;
+  opacity: 0; /* will be animated via GSAP */
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.split-right.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.split-right p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+

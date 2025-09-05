@@ -1,0 +1,33 @@
+.slidingStripsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw; /* Vertical gap between the two strips */
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    overflow: hidden; /* Hide the parts of the slider that go off-screen */
+}
+
+.slider {
+    display: flex;
+    position: relative;
+    gap: 40px; /* Horizontal gap between logos */
+    /* Make the slider wider than the screen to allow for smooth scrolling effect */
+    width: fit-content; 
+    /* Center the oversized slider. Adjust if needed. */
+    left: -5%; 
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* You can add a background or border if you like */
+    padding: 10px;
+}
+
+.stripIcon {
+    /* Optional: Style the icons, e.g., make them grayscale */
+    opacity: 1;
+    color: black;
+}

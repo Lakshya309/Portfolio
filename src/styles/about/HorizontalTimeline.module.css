@@ -1,0 +1,122 @@
+/* Main container that enables the horizontal scroll experience */
+.timelineContainer {
+  width: 100%;
+  overflow: hidden;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  font-family: 'Satoshi', sans-serif;
+  position: relative; /* For positioning the SVG */
+}
+
+/* NEW: The SVG for the animated line */
+.timelineSvg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.timelinePath {
+  stroke: rgba(248, 211, 79, 0.5);
+  stroke-width: 2;
+}
+
+/* The track that moves horizontally */
+.timelineTrack {
+  display: flex;
+  width: max-content;
+  height: 100vh;
+  position: relative;
+  align-items: center;
+}
+
+/* Each individual milestone section - now narrower to create overlap */
+.timelineSection {
+  width: 80vw; /* REDUCED from 100vw to create overlap */
+  height: 100vh;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 5vw;
+  position: relative;
+}
+
+/* NEW: The circular marker on the timeline */
+.timelineMarker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background-color: #0a0a0a;
+  border: 2px solid #f8d34f;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Position the text content on the grid */
+.timelineContent {
+  grid-column: 1 / 2;
+  padding-right: 5%;
+  z-index: 3; /* Ensure text is above the line and image */
+  position: relative;
+}
+
+.year {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #f8d34f;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.title {
+  font-family: 'cig', serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 450px;
+}
+
+/* Position the image container on the grid */
+.imageContainer {
+  grid-column: 2 / 3;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The crucial circular mask */
+.imageMask {
+  width: 35vw;
+  height: 35vw;
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  clip-path: circle(0% at 50% 50%); /* Initial state for animation */
+}
+
+.timelineImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

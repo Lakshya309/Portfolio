@@ -1,0 +1,138 @@
+/* --- Font Definition --- */
+@font-face {
+  font-family: 'cig';
+  src: url('../../public/fonts/ciguatera.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* --- Main Header Bar (Always Visible) --- */
+.headerBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 3rem;
+  z-index: 1000;
+  font-family: 'cig';
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  mix-blend-mode: difference;
+  pointer-events: none; 
+}
+
+.headerBar > div {
+  color: white; 
+  pointer-events: all;
+}
+
+.menuToggle {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* --- Brutalist Menu Overlay --- */
+.menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: #111111;
+  color: #EAEAEA;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  padding: 2rem;
+  border: 10px solid #EAEAEA;
+  box-sizing: border-box;
+}
+
+/* --- Navigation Links --- */
+.menuNav {
+  grid-column: 2 / span 10;
+  grid-row: 2 / span 6;
+  display: flex;
+  align-items: center;
+}
+
+.menuLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.menuLinkItem {
+  position: relative; /* For positioning the active indicator */
+  text-align: left;
+  padding: 0.5rem 0;
+}
+
+.menuLinkItem a {
+  font-family: 'cig';
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 1;
+  text-decoration: none;
+  color: #EAEAEA;
+  transition: color 0.3s ease;
+}
+
+.menuLinkItem a:hover {
+  color: #ffafaf;
+}
+
+/* --- Active Link Indicator --- */
+.activeIndicator {
+  position: absolute;
+  left: -2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  background-color: #ffafaf;
+  border-radius: 50%;
+}
+
+/* --- Footer Info (Brutalist Layout) --- */
+.socialInfo, .contactInfo {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #888;
+}
+
+.socialInfo {
+  grid-column: 2 / span 3;
+  grid-row: 8 / span 1;
+  align-self: end;
+}
+
+.contactInfo {
+  grid-column: 10 / span 2;
+  grid-row: 8 / span 1;
+  align-self: end;
+  text-align: right;
+}
+
+.socialInfo a, .contactInfo a {
+  color: #EAEAEA;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.contactInfo a {
+  margin-right: 0;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.socialInfo a:hover, .contactInfo a:hover {
+  color: #ffafaf;
+}
